@@ -17,6 +17,12 @@ import {
 import {
   WindchimeComponent
 } from './pages/windchime/windchime.component';
+import {
+  DocklayoutComponent
+} from './pages/docklayout/docklayout.component';
+import {
+  GridComponent
+} from './pages/gridlayout/gridlayout.component';
 import {HTTP_PROVIDERS} from "@angular/http";
 
 @Component({
@@ -26,8 +32,10 @@ import {HTTP_PROVIDERS} from "@angular/http";
   template: "<page-router-outlet></page-router-outlet>"
 })
 @RouteConfig([
-  { path: "/Login", component: LoginComponent, name: "Login", useAsDefault: true },
+  { path: "/Login", component: LoginComponent, name: "Login" },
   {path:'/List',component: ListComponent,name:'List'},
-  {path:'/Windchime',component: WindchimeComponent,name:'Windchime'}
+  {path:'/Windchime',component: WindchimeComponent,name:'Windchime'},
+  {path:'/Docklayout',component: DocklayoutComponent,name:'Docklayout'},
+  {path:'/Gridlayout',component: GridComponent,name:'Gridlayout',useAsDefault: true}
 ])
 export class AppComponent {}
