@@ -1,0 +1,51 @@
+.add-bar {
+  background-color: #BEBEBE;
+  padding: 5 10;
+}
+.add-bar Image {
+  height: 15;
+  vertical-align: center;
+  margin-left: 10;
+  margin-right: 5;
+}
+TextField {
+  color: white;
+}
+
+.delete-container {
+  padding: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.delete-container StackLayout {
+  padding: 5;
+}
+.delete-container Image {
+  height: 20;
+}
+
+.grocery-lis {
+  background: #ccc;
+}
+
+.list-item {
+  background: #ccc;
+}
+
+ListView {
+  opacity: 0;
+}
+
+.visible {
+  animation-name: show;
+  animation-duration: 1s;
+}
+
+@keyframes show {
+  from{
+    opacity : 0;
+  }
+  to{
+    opacity : 1;
+  }
+}

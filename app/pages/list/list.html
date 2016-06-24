@@ -1,0 +1,19 @@
+<GridLayout rows="auto,*">
+  <GridLayout row="0" columns="*,auto" class="add-bar">
+    <TextField #groceryTextField hint="Enter a grocery item" col="0" [(ngModel)]="grocery"></TextField>
+    <Image src="res://add" col="1" (tap)="add()"></Image>
+  </GridLayout>
+  <ListView row="1" [items]="groceryList" class="small-spacing grocery-list" [class.visible]="!isLoading">
+    <template let-item="item">
+      <GridLayout columns="*,auto" class="list-item">
+        <Label [text]="item.name" class="medium-spacing" col="0"></Label>
+        <GridLayout col="1" class="delete-container">
+          <StackLayout>
+            <Image src="res://delete" ></Image>
+          </StackLayout>
+        </GridLayout>
+      </GridLayout>
+    </template>
+  </ListView>
+  <ActivityIndicator [busy]="isLoading" [visibility]="isLoading ? 'visible' : 'collapse'" row="1" horizontalAlignment="center" verticalAlignment="center"></ActivityIndicator>
+</GridLayout>
